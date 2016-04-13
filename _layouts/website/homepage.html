@@ -27,15 +27,3 @@
     </div>
 </div>
 
-{% block js %}
-<script>
-    $(document).ready(function() {
-        $('.see-more').click(function() {
-            var $btn = $(this);
-            var $panel = $btn.parents('.panel');
-            $panel.find('.list-group-item').removeClass('hidden');
-            $btn.hide();
-        });
-    });
-</script>
-{% endblock %}
