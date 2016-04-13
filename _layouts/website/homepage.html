@@ -13,15 +13,29 @@
                 </div>
                 <div class="list-group">
                 {% for article in part.articles %}
-                    {% if loop.index < 6 %}
-                    <a href="{{ article.path|resolveFile }}" class="list-group-item">
+                    <a href="{{ article.path|resolveFile }}" class="list-group-item {% if loop.index > 6 %}hidden{% endif %}">
                         <i class="fa fa-file-o" aria-hidden="true"></i> {{ article.title }}
                     </a>
-                    {% endif %}
                 {% endfor %}
+                {% if part.articles.length >= 6 %}
+                    <button type="button" class="list-group-item see-more">See more</button>
+                {% endif %}
                 </div>
             </div>
         </div>
     {% endfor %}
     </div>
 </div>
+
+{% block js %}
+<script>
+    $(document).ready(function() {
+        $('.see-more').click(function() {
+            var $btn = $(this);
+            var $panel = $btn.parents('.panel');
+            $panel.find('.list-group-item').removeClass('hidden');
+            $btn.hide();
+        });
+    });
+</script>
+{% endblock %}

@@ -86,4 +86,16 @@
     })();
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    {% block js %}
+    <script>
+        $(document).ready(function() {
+            $('.see-more').click(function() {
+                var $btn = $(this);
+                var $panel = $btn.parents('.panel');
+                $panel.find('.list-group-item').removeClass('hidden');
+                $btn.hide();
+            });
+        });
+    </script>
+    {% endblock %}
 </html>
