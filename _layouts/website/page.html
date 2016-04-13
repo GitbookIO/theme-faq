@@ -1,0 +1,47 @@
+{% extends "website/layout.html" %}
+
+{% block title %}{{ page.title }} · {{ super() }}{% endblock %}
+{% block description %}{{ page.description }}{% endblock %}
+
+{% block page %}
+    {% if page.level == "0" %}
+        {% include "./homepage.html" %}
+    {% else %}
+    <div class="faq-page-container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ol class="breadcrumb">
+                    <li><a href="{{ site.baseurl }}/">{{ "FAQ_TITLE"|t }}</a></li>
+                    <li class="active">{{ page.title }}</li>
+                </ol>
+                <div class="faq-page">
+                {{ page.content|safe }}
+                </div>
+            </div>
+        </div>
+
+        {% block faq_page_related %}
+            {% if page.related.length > 0 %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ "FAQ_RELATED_ARTICLES"|t }}</h3>
+                </div>
+                <div class="list-group">
+                    {% for related in page.related %}
+                        {% set relatedArticle = related|getArticleByPath %}
+                        <a href="{{ relatedArticle.path|resolveFile }}" class="list-group-item">{{ relatedArticle.title }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        {% endblock %}
+
+        {% block faq_page_footer %}
+        <div class="faq-page-footer">
+            <a href="https://www.gitbook.com" target="_blank">{{ "GITBOOK_LINK"|t }}</a> ·
+            <span>Last edit {{ file.mtime|date('MMM Do YY') }}</span>
+        </div>
+        {% endblock %}
+    </div>
+    {% endif %}
+{% endblock %}

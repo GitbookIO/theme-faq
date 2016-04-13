@@ -1,0 +1,29 @@
+{
+    "name": "gitbook-plugin-theme-faq",
+    "description": "Theme for using GitBook as a FAQ or Knowledge base",
+    "version": "0.0.0",
+    "engines": {
+        "gitbook": ">=3.0.0"
+    },
+    "devDependencies": {
+        "less": "2.6.0"
+    },
+    "scripts": {
+        "prepublish": "mkdir -p _assets/website; lessc -clean-css  ./src/less/website.less _assets/website/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GitbookIO/theme-faq.git"
+    },
+    "author": "FriendCode Inc. <contact@gitbook.com>",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/GitbookIO/theme-faq/issues"
+    },
+    "contributors": [
+        {
+            "name": "Samy Pessé",
+            "email": "samy@gitbook.com"
+        }
+    ]
+}
