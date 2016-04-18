@@ -3,8 +3,8 @@
 
     input {
         padding: 5px 10px;
-        width: 50%;
-        min-width: 300px;
+        width: @faq-search-width;
+        min-width: @faq-search-minwidth;
 
         &:focus, &:active {
             outline: none;
@@ -24,5 +24,12 @@
     .no-results {
         text-align: center;
         padding: 40px 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .book-search input {
+        width: 100%;
+        min-width: 100%;
     }
 }

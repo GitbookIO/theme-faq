@@ -1,3 +1,5 @@
+@import "../../node_modules/gitbook-markdown-css/less/mixin.less";
+
 @import "./variables.less";
 @import "./panel.less";
 @import "./search.less";
@@ -28,29 +30,33 @@
 
 .faq-page-container {
     width: 100%;
-    max-width: 840px;
+    max-width: @faq-page-container-width;
     margin: 0px auto;
     margin-top: -60px;
-    padding: 0px 20px;
+    padding: 0px @faq-page-padding;
 }
 
 .faq-page {
     font-size: 15px;
     line-height: 1.6;
 
-    img {
-        max-width: 100%;
-    }
+    .gitbook-markdown();
 }
 
 .faq-page-footer {
     padding: 0px 10px;
-
+    margin-bottom: 20px;
     text-align: right;
     color: #999;
-    margin-bottom: 20px;
 
     a, span {
         color: inherit;
     }
 }
+
+@media (max-width: @faq-page-container-width) {
+    .faq-page-container {
+        padding: 0px;
+    }
+}
+
