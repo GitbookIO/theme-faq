@@ -5,9 +5,26 @@
 
 {% block page %}
     {% if page.level == "0" %}
-        {% include "./homepage.html" %}
+        {% for part in summary.parts %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="title-secondary">{{ part.articles.length }} articles</span>
+                        {{ part.title }}
+                    </h3>
+                </div>
+                <div class="list-group">
+                {% for article in part.articles %}
+                    {% if article.path != readme.path %}
+                    <a href="{{ article.path|resolveFile }}" class="list-group-item {% if loop.index > 6 %}hidden{% endif %}">
+                        <i class="fa fa-file-o" aria-hidden="true"></i> {{ article.title }}
+                    </a>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
     {% else %}
-    <div class="faq-page-container">
         <div class="panel panel-default">
             <div class="panel-body">
                 <ol class="breadcrumb">
@@ -35,13 +52,5 @@
             </div>
             {% endif %}
         {% endblock %}
-
-        {% block faq_page_footer %}
-        <div class="faq-page-footer">
-            <a href="https://www.gitbook.com" target="_blank">{{ "GITBOOK_LINK"|t }}</a> ·
-            <span>Last edit {{ file.mtime|date('MMM Do YY') }}</span>
-        </div>
-        {% endblock %}
-    </div>
     {% endif %}
 {% endblock %}

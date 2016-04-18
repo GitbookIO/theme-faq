@@ -13,13 +13,20 @@
 }
 
 .search-results {
-    max-width: @faq-page-width;
-    width: 100%;
     padding: @faq-page-padding;
-    margin: 0px auto;
-    margin-top: -60px;
     border: 1px solid @header-border;
     background: #fff;
+
+    .has-results {
+        .search-results-title {
+            margin-top: 0px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            font-weight: normal;
+        }
+    }
 
     .no-results {
         text-align: center;

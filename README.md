@@ -28,11 +28,23 @@ related:
 My article!
 ```
 
+##### Add logo to header
+
+Extend the theme by creating a file `_layouts/website/page.html` in your book with:
+
+```html
+{% extends template.self %}
+
+{% block faq_header_brand %}
+<img src="https://mywebsite.com/logo.png" height="30" />
+{% endblock %}
+```
+
 ##### Add links to header
 
 Extend the theme by creating a file `_layouts/website/page.html` in your book with:
 
-```
+```html
 {% extends template.self %}
 
 {% block faq_menu %}
