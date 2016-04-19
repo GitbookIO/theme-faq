@@ -1,9 +1,9 @@
 {
   "name": "gitbook-plugin-theme-faq",
   "description": "Theme for using GitBook as a FAQ or Knowledge base",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
-    "gitbook": ">=3.0.0-pre.8"
+    "gitbook": ">=3.0.0-pre.9"
   },
   "devDependencies": {
     "gitbook-markdown-css": "^1.0.1",
