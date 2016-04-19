@@ -7,7 +7,8 @@
   },
   "devDependencies": {
     "gitbook-markdown-css": "^1.0.1",
-    "less": "2.6.0"
+    "less": "2.6.0",
+    "less-plugin-clean-css": "^1.5.1"
   },
   "scripts": {
     "prepublish": "mkdir -p _assets/website; lessc -clean-css  ./src/less/website.less _assets/website/style.css"
