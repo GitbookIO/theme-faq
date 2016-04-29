@@ -4,7 +4,7 @@
 {% block description %}{{ page.description }}{% endblock %}
 
 {% block page %}
-    {% if page.level == "0" %}
+    {% if page.path == readme.file.path %}
         {% for part in summary.parts %}
             <div class="panel panel-default">
                 <div class="panel-heading">
