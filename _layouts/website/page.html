@@ -51,8 +51,10 @@
                 </div>
                 <div class="list-group">
                     {% for related in page.related %}
-                        {% set relatedArticle = related|getArticleByPath %}
+                        {% set relatedArticle = getArticleByPath(related) %}
+                        {% if relatedArticle %}
                         <a href="{{ relatedArticle.path|resolveFile }}" class="list-group-item">{{ relatedArticle.title }}</a>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
