@@ -31,9 +31,18 @@
     margin: 0px;
     margin-bottom: 30px;
 
-
     h1 {
         border: 0px;
+    }
+
+    .description {
+        text-align: left;
+
+        // Align with faq-page-container
+        width: @faq-search-width;
+        min-width: @faq-search-minwidth;
+        margin: 0px auto;
+        padding-top: 40px;
     }
 }
 
@@ -65,8 +74,13 @@
 }
 
 @media (max-width: @faq-page-container-width) {
+    .description {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .faq-page-container {
-        padding: 0px;
+        padding: 20px 0px;
 
         > .panel {
             border-right: 0px;
