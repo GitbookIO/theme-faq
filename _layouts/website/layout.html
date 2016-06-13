@@ -60,9 +60,17 @@
             {% endif %}
         {% endblock %}
     </h1>
+
     {% block search_input %}{% endblock %}
+
+    {% if file.path == readme.file.path %}
+    <div class="description">
+        {{ page.content | safe }}
+    </div>
+    {% endif %}
     </div>
 </div>
+
 <div class="faq-page-container">
 {% block search_results %}
     {% block page %}{% endblock %}
@@ -76,6 +84,7 @@
 {% endblock %}
 </div>
 {% endblock %}
+
 
 {% block javascript %}
 <script src="{{ "gitbook.js"|resolveAsset }}"></script>

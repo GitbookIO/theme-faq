@@ -55,3 +55,14 @@ Extend the theme by creating a file `_layouts/website/page.html` in your book wi
 {% endblock %}
 ```
 
+##### Add short description for the home page
+
+The content of your README will be used as short description on the home page of your FAQ. If you want to keep a separate and more detailed README file for your project, you can use configure your `book.json` to specify the file to use:
+
+```json
+{
+  "structure": {
+     "readme": "home-page-description.md"
+  }
+}
+```

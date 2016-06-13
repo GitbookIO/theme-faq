@@ -10,15 +10,6 @@
 .faq-navbar {
     margin: 0px;
     border: 0px;
-
-    .nav-bar .navbar-nav > li > a {
-        text-transform: uppercase;
-        opacity: 0.6;
-        letter-spacing: 0.1em;
-        font-weight: 300;
-        padding-top: 18px;
-        padding-bottom: 18px;
-    }
 }
 
 .faq-header {
@@ -31,9 +22,22 @@
     margin: 0px;
     margin-bottom: 30px;
 
-
     h1 {
         border: 0px;
+    }
+
+    .description {
+        color: #777;
+        text-align: justify;
+        line-height: 1.8em;
+
+        // Align with faq-page-container
+        width: @faq-page-container-width;
+        min-width: @faq-page-container-width;
+        margin: 0px auto;
+        padding-left: @faq-page-padding;
+        padding-right: @faq-page-padding;
+        padding-top: 40px;
     }
 }
 
@@ -65,8 +69,13 @@
 }
 
 @media (max-width: @faq-page-container-width) {
+    .description {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .faq-page-container {
-        padding: 0px;
+        padding: 20px 0px;
 
         > .panel {
             border-right: 0px;
