@@ -68,7 +68,7 @@ Extend the theme by creating a file `_layouts/website/page.html` in your book wi
 
 The content of your `README` is used as a short description for the home page of your FAQ.
 
-If you wish use a specific file for this description instead of your project's README, you can your `book.json` to do so:
+If you wish use a specific file for this description instead of your project's README, you can configure your `book.json` to do so:
 
 ```json
 {
