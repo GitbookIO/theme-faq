@@ -32,7 +32,8 @@
         line-height: 1.8em;
 
         // Align with faq-page-container
-        max-width: @faq-page-container-width;
+        width: @faq-page-container-width;
+        min-width: @faq-page-container-width;
         margin: 0px auto;
         padding-left: @faq-page-padding;
         padding-right: @faq-page-padding;
@@ -68,7 +69,7 @@
 }
 
 @media (max-width: @faq-page-container-width) {
-    .faq-header .description {
+    .description {
         padding-left: 0px;
         padding-right: 0px;
     }
