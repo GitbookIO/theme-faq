@@ -12,7 +12,7 @@ Add the theme to your book's configuration (`book.json`):
 {
     "plugins": [
         "theme-faq",
-        "-fontsettngs",
+        "-fontsettings",
         "-sharing"
     ]
 }
