@@ -35,13 +35,13 @@
             <div class="panel-body">
                 <ol class="breadcrumb">
                     <li><a href="{{ basePath }}">{{ "FAQ_TITLE"|t }}</a></li>
-                        {% for part in summary.parts %}
-                            {% for article in part.articles %}
-                                {% if article.path == file.path and part.title %}
-                                    <li>{{ part.title }}</li>
-                                {% endif %}
-                            {% endfor %}
+                    {% for part in summary.parts %}
+                        {% for article in part.articles %}
+                            {% if article.path == file.path and part.title %}
+                                <li>{{ part.title }}</li>
+                            {% endif %}
                         {% endfor %}
+                    {% endfor %}
                     <li class="active">{{ page.title }}</li>
                 </ol>
                 <div class="faq-page">
