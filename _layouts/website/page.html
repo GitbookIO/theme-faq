@@ -15,7 +15,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <span class="title-secondary">{{ part.articles.length }} articles</span>
+                        <span class="title-secondary">{{ (part.articles.length - 1) if (loop.index == 1) else part.articles.length }} articles</span>
                         {{ part.title }}
                     </h3>
                 </div>
