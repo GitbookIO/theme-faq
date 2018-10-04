@@ -1,7 +1,7 @@
 {
-  "name": "gitbook-plugin-theme-faq",
-  "description": "Theme for using GitBook as a FAQ or Knowledge base",
-  "version": "1.2.1",
+  "name": "gitbook-plugin-bandwidth-theme-faq",
+  "description": "Theme for using GitBook as a FAQ or Knowledge base. Forked to fit Bandwidth's needs",
+  "version": "1.2.2",
   "engines": {
     "gitbook": ">=3.0.0-pre.10"
   },
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GitbookIO/theme-faq.git"
+    "url": "https://github.com/jmulford/bandwidth-theme-faq.git"
   },
   "author": "FriendCode Inc. <contact@gitbook.com>",
   "license": "Apache-2.0",
@@ -26,6 +26,10 @@
     {
       "name": "Samy Pessé",
       "email": "samy@gitbook.com"
+    },
+    {
+      "name": "Jacob Mulford",
+      "email": "jmulford@bandwidth.com"
     }
   ]
 }
