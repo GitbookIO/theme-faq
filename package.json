@@ -1,5 +1,5 @@
 {
-  "name": "gitbook-plugin-bandwidth-theme-faq",
+  "name": "gitbook-plugin-theme-faq",
   "description": "Theme for using GitBook as a FAQ or Knowledge base. Forked to fit Bandwidth's needs",
   "version": "1.2.2",
   "engines": {
